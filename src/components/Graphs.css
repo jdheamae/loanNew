@@ -1,0 +1,21 @@
+.graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.large-graph, .small-graph {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 1520px;
+  margin-left: 35px;
+}
+
+.small-graphs {
+  display: flex;
+  gap: 20px;
+  
+}
