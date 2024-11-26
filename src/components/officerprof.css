@@ -15,7 +15,7 @@
     z-index: 1000;
     border-bottom: 1px solid #990000;
     text-align: left;
-    margin-left: 0px;
+    margin-left: -120px;
 }
 .logol {
     width: 40px;
@@ -30,7 +30,7 @@
     color: #990000;
     text-align: left;
     font-weight: bold;
-    margin-right: 1104px;
+    margin-right: 904px;
     margin-top: 15px;
 }
 
@@ -77,7 +77,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 90px;
-    margin-top: -70px;
+    margin-top: -50px;
 }
 
 .username {
@@ -152,6 +152,7 @@
     padding-left: 50px; /* Optional: Adjust padding as needed */
     width: calc(100% - 200px); /* Adjust width to occupy remaining space */
     margin-top: 80px;
+    margin-bottom: 50px;
 }
 
 .logoutcont {
@@ -185,6 +186,7 @@ main1 {
   }
 .main2 {
     margin-top: 1000px;
+    margin-bottom: 50px;
 }
 .main3 {
     margin-top: -100px;
@@ -214,8 +216,8 @@ main1 {
 }
 .content1 {
     display: flex;
-    max-width: 1200px;
-    margin: 40px 0;
+    width: 1000px ;
+    margin: 60px 0;
     margin-left: 40px;
     
   }
@@ -228,7 +230,22 @@ main1 {
     padding-bottom: 20px;
     border-bottom: 1px solid #eaeaea;
 }
-
+.profile-photo1{
+    margin-top: 120px;
+  }
+  .about-info1{
+    color: #202840;
+    width: 200px;
+    text-align: left;
+    margin-top: -35px;
+   
+  }
+  .name3{
+    margin-top: -60px;
+    margin-left: 160px;
+    color: #202840;
+    width: max-content;
+  }
 .profile-image img {
     width: 100px;
     height: 100px;
@@ -274,13 +291,13 @@ main1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: -5px;
     width: 65%;
     height: 50%; /* Allow height to adjust based on content */
     padding: 30px; /* Remove padding */
     border-radius: 15px; /* Remove border radius */
     background-color:#EBF3FE;
-    margin-left: -30px;
+    margin-left: 50px;
 }
 
 
@@ -321,6 +338,7 @@ main1 {
     padding: 50px 50px;
     background-color: white;
     gap: 20px; /* Add space between containers */
+    margin-bottom: 50px;
 }
 
 .progress-bar {
@@ -340,12 +358,12 @@ main1 {
 
 .statistics-section {
     display: flex;
-    margin-top: 680px; /* Reduce margin to avoid too much space */
+    margin-top: 630px; /* Reduce margin to avoid too much space */
     padding: 20px;
     border-radius: 15px;
-    width: 800px;
+    width: 650px;
     height: 300px;
-    margin-left: -940px; 
+    margin-left: -630px; 
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
@@ -373,7 +391,7 @@ main1 {
 .legend ul {
     list-style-type: none;
     padding: 5px;
-    margin-left: 40px;
+    margin-left: -20px;
     width: 50%;
 }
 
@@ -395,7 +413,7 @@ main1 {
 .chart-container {
     width: 35%;
     height: auto;
-    margin-left: 450px;
+    margin-left: 350px;
     margin-top: -130px;
 }
 
@@ -487,49 +505,17 @@ canvas {
     margin-bottom: 10px;
     text-align: left;
 }
- /*graph*/
- .graph-sectiono {
-    margin-top: 990px;
-    padding: 20px;
-    margin-left: -825px;
-    width: 680px;
-}
-
-.graph-containero {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    height: 150px;
-    margin-bottom: 100px;
-}
-
-.grapho {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #e6f7ff;
-    padding: 20px;
-    text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
-    height: 150px;
-    
-}
-
-.graph3{
-    margin-left: -60px;
-}
-
+ 
 .stathead{
     background-color: #051424;;
     color: #fff;
     border: 1px solid #ccc;
     margin-bottom: 15px;
     border-radius: 8px 8px 0px 0px;
-    width:842px;
+    width:650px;
     margin-left: -31px;
     margin-right: -10px;
-    margin-top: -250px;
+    margin-top: -240px;
   }
   .stathead h2{
     margin-left: 20px;

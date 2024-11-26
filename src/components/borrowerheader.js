@@ -87,7 +87,7 @@ const BorrowerHeader = () => {
             {/* Profile Dropdown */}
             {isProfileVisible && (
               <div className="prof-dropdown">
-                <Link to="/borrowerdash" className="profile-link">My Profile</Link>
+                <button className="logout-button"><Link to="/borrowerdash" className="profile-link">My Profile</Link></button>
                 <button onClick={handleLogout} className="logout-button">Logout</button>
               </div>
 

@@ -162,7 +162,7 @@ const Dashboard2 = () => {
                   <td>{transaction.defaultStatus}</td>
                   <td className="action-buttons">
                       <button
-                        className="btn-edit"
+                        className="view-button"
                         onClick={() => handleEdit(transaction)}
                       >
                         Edit

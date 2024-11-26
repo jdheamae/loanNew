@@ -1,90 +1,102 @@
-import React, { useState } from 'react'; 
-import { useNavigate } from 'react-router-dom'; 
-import axios from 'axios';  
-import './login.css'; 
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './login.css';
 
 const Login = () => {
-
     const [usernameOrEmail, setUsernameOrEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
-    const navigate = useNavigate(); 
+    const [rememberMe, setRememberMe] = useState(false);
+    const navigate = useNavigate();
+
+    // Load remembered username/email if "Remember Me" was checked
+    useEffect(() => {
+        const rememberedUsername = localStorage.getItem('rememberedUsername');
+        if (rememberedUsername) {
+            setUsernameOrEmail(rememberedUsername);
+            setRememberMe(true);
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
-    
+
         try {
             const response = await axios.post('http://localhost:3001/login', { 
                 usernameOrEmail, 
                 password 
             });
-    
-            const token = response.data.token; // Get the JWT token
-            const userId = response.data.userId;
-            const role = response.data.role;
-    
-            // Store the token in localStorage
+
+            const { token, userId, role } = response.data;
+
+            // Store the token, userId, and role in localStorage
             localStorage.setItem('token', token);
-    
-            // Store the userId and role if needed
             localStorage.setItem('userId', userId);
             localStorage.setItem('role', role);
-    
-            console.log(`Response received:`, response.data); 
-            console.log(`Role received: '${role}'`);
-    
-            if (role === 'admin') {
-                navigate('/officerdashboard1'); // Navigate to admin dashboard
-            } else if (role === 'member') {
-                navigate('/'); // Navigate to member landing page
+
+            if (rememberMe) {
+                localStorage.setItem('rememberedUsername', usernameOrEmail);
+            } else {
+                localStorage.removeItem('rememberedUsername');
             }
-    
+
+            if (role === 'admin') {
+                navigate('/officerdashboard1'); // Admin dashboard
+            } else if (role === 'member') {
+                navigate('/'); // Member landing page
+            }
         } catch (error) {
             console.error('Error during login:', error);
             setError('Login failed. Please check your username/email and password.');
+            window.alert('Login failed. Please check your username/email and password.');
         }
     };
-    
 
     const handleBack = () => {
-        navigate('/'); 
+        navigate('/');
     };
-    
-    
+
     const handleRegister = () => {
-        navigate('/signup'); 
+        navigate('/signup');
     };
 
     return (
         <div className="login-page">
             <div className="login-box">
                 <button className="back-btn" onClick={handleBack}>Back</button>
-               {/* <button className="reg-btn" onClick={handleRegister}>Register</button>*/} 
                 <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logolog"/>
                 <h2 className="loginh2">MSU-IIT National Multi-Purpose Cooperative</h2>
                 <p className="loginp">Your Gateway to Financial Possibilities.</p>
                 <form onSubmit={handleSubmit}>
-                    <label className="labels">Username</label>
+                    <label className="labelp">Username</label>
                     <input 
                         type="text" 
                         id="usernameoremail"
                         className="login"
                         placeholder="Username or Email..." 
+                        value={usernameOrEmail}
                         onChange={(e) => setUsernameOrEmail(e.target.value)}
                     />
-                    <label className="labels">Password</label>
+                    <label className="labelp">Password</label>
                     <input 
                         type="password" 
                         id="password"
                         className="login"
                         placeholder="**************" 
+                        value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <div className="options">
                         <div className="remember-me">
-                            <input type="checkbox" id="remember" />
-                            <label htmlFor="remember" >Remember me</label>
+                            <input 
+                                type="checkbox" 
+                                id="remember" 
+                                checked={rememberMe}
+                                onChange={(e) => setRememberMe(e.target.checked)} 
+                            />
+                            <label htmlFor="remember">Remember me</label>
                         </div>
                         <a href="#" className="forgot">Forgot Password?</a>
                     </div>
@@ -92,7 +104,6 @@ const Login = () => {
                 </form>
                 
                 <button className="register-btn" onClick={handleRegister}>Register</button>
-                
             </div>
         </div>
     );

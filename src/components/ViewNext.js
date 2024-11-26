@@ -174,8 +174,8 @@ const [currentDateTime, setCurrentDateTime] = useState(new Date());
             <div className="section-content"> 
             <table classname="obligations-table">
               <thead>
-                <tr style={{ textAlign: 'center' }}>
-                  <th > Creditor</th>
+                <tr>
+                  <th>Creditor</th>
                   <th>Principal Amount</th>
                   <th>Present Balance</th>
                   <th>Maturity Date</th>
@@ -194,7 +194,7 @@ const [currentDateTime, setCurrentDateTime] = useState(new Date());
             <h2>List of Properties(Real and Personal)</h2>  
             <table classname="obligations-table">
               <thead>
-                <tr style={{ textAlign: 'center' }}>
+                <tr>
                   <th>Description</th>
                   <th>Location </th>
                   <th>Area </th>
@@ -222,8 +222,8 @@ const [currentDateTime, setCurrentDateTime] = useState(new Date());
             {borrower.repayments.length > 0 ? (
               <table className="repayment-table">
                 <thead>
-                  <tr style={{ textAlign: 'center' }}>
-                    <th >Date</th>
+                  <tr>
+                    <th>Date</th>
                     <th>Amount</th>
                     <th>Status</th>
                   </tr>
@@ -250,18 +250,16 @@ const [currentDateTime, setCurrentDateTime] = useState(new Date());
           <div className="section-content">
             <table className="cash-flow-table">
               <thead>
-                <tr >
-                  <th style={{ textAlign: 'center' }}>Document Name</th>
-                  <th style={{ textAlign: 'center' }}>File</th>
-                  <th style={{ textAlign: 'center' }}>Actions</th>
+                <tr>
+                  <th>Document Name</th>
+                  <th>File</th>
                 </tr>
               </thead>
               <tbody>
-                <tr >
-                  <td style={{ textAlign: 'center' }}>Member-Borrower's Signature</td>
-                  <td style={{ textAlign: 'center' }}>{borrower.documents.collateral}</td>
-                  <td className="btnAct"> 
-                  <button  className="btn1 btn-view1"  onClick={() => handleEdit(transaction)} >
+                <tr>
+                  <td>Member-Borrower's Signature</td>
+                  <td> {borrower.documents.collateral}
+                  <button  className="btn1 btn-view"  onClick={() => handleEdit(transaction)} >
                           View
                         </button>
                         <button className="btn1 btn-download" onClick={() => handleDelete(transaction.loanId)} >

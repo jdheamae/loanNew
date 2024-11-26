@@ -153,7 +153,7 @@
 /* Popup Box */
 .popup-box {
     background: white;
-    padding: 20px;
+    padding: 45px;
     width: 70%;
     height: 80%;
     border-radius: 8px;
@@ -190,7 +190,7 @@
     margin-top: 30px;
     margin-left: 40px;
     color: #9C0B0F;
-    font-weight: 800;
+    font-weight: 600;
     
 }
 .loan-container {
@@ -224,19 +224,23 @@
 .popup-image-container {
     width: 100%;
     height: 400px;
-    margin-top: -50px;
+    margin-top: 25px;
 }
 
 .popup-image {
     width: 40%;
     height: 100%;
     margin-left: 53%;
-    margin-top: -880px;
+    margin-top: -550px;
     margin-bottom: 60px;
 }
-
-.loan-info-container {
+.edu-container {
     padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+}
+.loan-info-container {
+    padding: 15px;
     border-radius: 8px;
     width: 500px;
 }
@@ -244,11 +248,13 @@
 .loan-info-container p {
     width: 80%;
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 13px;
     color: #333;
     text-indent: 50px;
     text-align: justify;
     text-justify: inter-word;
+    padding: 5px;
+    margin-top: 20px;
 }
 
 .loan-info-container ul {
@@ -257,7 +263,7 @@
 
 .loan-info-container li {
     margin-bottom: 5px;
-    font-size: 1rem;
+    font-size: 12px;
     color: #555;
 }
 

@@ -50,7 +50,7 @@
   color: #990000;
   text-align: left;
   font-weight: bold;
-  margin-right: 941px;
+  margin-right: 940px;
   margin-top: 15px;
 }
 .landingh2off2 {
@@ -58,7 +58,15 @@
   color: #990000;
   text-align: left;
   font-weight: bold;
-  margin-right: 958px;
+  margin-right: 960px;
+  margin-top: 15px;
+}
+.landingh2off3 {
+  font-size: 15px;
+  color: #990000;
+  text-align: left;
+  font-weight: bold;
+  margin-right: 940px;
   margin-top: 15px;
 }
 
@@ -202,13 +210,13 @@ tbody tr:last-child td:last-child {
 
 .search-bar {
   position: relative;
-  margin-top: -29px;
+  margin-top: -25px;
 }
 
 .search-bar input {
   width: 48%;
-  padding: 5px;
-  margin-left:520px;
+  padding: 8px;
+  margin-left:530px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 12px;
@@ -228,7 +236,8 @@ tbody tr:last-child td:last-child {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
   transition: all 0.3s ease; /* Smooth transition for hover effects */
   width: 80px;
-
+  align-items: center;
+  margin-left: 50px;
 }
 .view-button:hover {
   background-color: rgb(255, 255, 255); /* Darker shade on hover */

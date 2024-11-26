@@ -37,7 +37,7 @@
 .plesDet {
     display: flex;
     justify-content: flex-end; /* Aligns the content to the right */
-    margin-left:1000px;
+    margin-left:950px;
     margin-top: -110px; 
     margin-right: 10px; 
     
@@ -47,6 +47,7 @@
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     margin-bottom: 10px;
+   
 }
 .det {
     display: flex;
@@ -57,35 +58,36 @@
 .lugar label
 {
     margin-right: 5px;
-    font-size: 18px;
+    font-size: 14px;
     color: #000000;
     font-weight: bold;
-   
+
 }
 .det label {
     width: 100px; /* Set a fixed width for labels to align them */
-    font-size: 18px;
+    font-size: 14px;
     color: #000000;
     font-weight: bold;
-    margin-right: -180px; /* Adds space between label and input */
+    margin-right: -140px; /* Adds space between label and input */
 }
 
 .lugar select {
-    width: 150px; /* Ensures consistency in width for both input types */
+    width: 120px; /* Ensures consistency in width for both input types */
     padding: 8px;
     border: 1px solid #000000;
     border-radius: 0px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
 }
 .det input[type="date"] {
-    width: 150px; /* Ensures consistency in width for both input types */
-    padding: 8px;
+    width: 120px; /* Ensures consistency in width for both input types */
+    padding: 5px;
     border: 1px solid #000000;
     border-radius: 0px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
-    margin-left: 200px;
+    margin-left: 120px;
+    margin-right: 50px;
 }
 
 
@@ -94,14 +96,14 @@
     align-items: center; /* Vertically center */
     justify-content: flex-end; /* Align items to the right */
     margin-bottom: 10px; /* Space between form groups */
-    width: 100%; /* Ensure the container takes full width */
+    width: 50%; /* Ensure the container takes full width */
     padding-right: 20px; /* Optional: add padding to control distance from the right edge */
 }
 
 
 .bago label {
     margin-right: 20px; /* Adds space between checkboxes */
-    font-size: 18px;
+    font-size: 14px;
     color: #000000;
     font-weight: bold;
 }
@@ -112,25 +114,33 @@
     padding-left: 50px;
     margin-top: 25px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 14px;
+}
+
+.pili1 {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 
 
 /* Hide the browser's default checkbox */
-.pili input {
+.pili input,.pili1 input  {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
 }
-.pili input:checked + .checkmarkapp {
+.pili input:checked + .checkmarkapp, .pili1 input:checked + .checkmarkapp {
     background-color: #10004E;
     
 }
 
-.pili input:checked + .checkmarkapp::after {
+.pili input:checked + .checkmarkapp::after,.pili1 input:checked + .checkmarkapp::after {
     content: "✔";
     position: absolute;
     top: 3px;
@@ -144,19 +154,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border: 1px solid #10004E;
-    margin-top: 10px;
 }
 .checkmark-1app {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 10px;
+    width: 10px;
     background-color: #eee;
     border: 1px solid #10004E;
+    
 }
 
 /* On mouse-over, add a grey background color */
@@ -208,12 +218,12 @@
 .genderapp{
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Stack label and input vertically */
-
+    
 }
 
 .genderapp select {
     width: 50%; /* Make each group take full width */
-    padding: 11px;
+    padding: 5px;
     margin: 0px 5px 0px 12px;
     border-radius: 0%;
     border: 1px solid #10004E;
@@ -221,9 +231,9 @@
 .genderapp label {
     width: 50%; /* Make each group take full width */
     padding: 11px;
-    margin: 0px 50px 0px 0px;
-    border-radius: 0%  
-
+    margin: 0px 50px -5px 0px;
+    border-radius: 0%  ;
+    font-size: 14px;
 }
 
 .ubosbali {
@@ -317,7 +327,7 @@
 }
 .civilapp select {
     width: 100%; /* Make each group take full width */
-    padding: 11px;
+    padding: 5px;
     margin: 0px 5px 0px 12px;
     border-radius: 0%;
     border: 1px solid #10004E;
@@ -328,8 +338,8 @@
     width: 50%; /* Make each group take full width */
     padding: 11px;
     margin: 0px 50px 0px 0px;
-    border-radius: 0%  
-
+    border-radius: 0%  ;
+    font-size:14px;
 }
 
 .column {
@@ -368,7 +378,7 @@ input{
 
 .fillupan input{
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #10004E;
     font-size: 14px;
     margin-left: 0;
@@ -378,25 +388,14 @@ input{
 }
 .fillupan select,
 .fillupan textarea {
-    width: 105%;
-    padding: 8px;
+    width: 100%;
+    padding: 5px;
     border: 1px solid #10004E;
     font-size: 14px;
     box-sizing: border-box;
     position: relative;
 }
 
-.balanceFields label {
-    display: inline-block;
-    width: 120px;
-    margin-right: 55%;
-}
-
-.balanceFields input {
-    display: inline-block;
-    width: 80%;
-    margin-bottom: 5px;
-}
 
 
 textarea {
@@ -415,6 +414,7 @@ textarea {
 }
 .checkboxq-groupapp label{
     font-size: 14px;
+    margin-left: -5px;
 }
 
 .submit-btn {
@@ -599,26 +599,6 @@ textarea {
 }
 
 
-/* Create a custom checkbox */
-.checkmarkapp {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border: 1px solid #10004E;
-    margin: 0px 10px;
-}
-.checkmark-1app {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border: 1px solid #10004E;
-}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmarkapp:after {
@@ -641,7 +621,7 @@ textarea {
 .genderapp {
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Stack label and input vertically */
-    margin-top: -75px;
+    margin-top: -73px;
 }
 
 .civilapp{
@@ -656,17 +636,20 @@ textarea {
 }
 
 .ageapp input{
-    border: 1px solid #10004E;
+border: 1px solid #10004E;
    margin-left: 268px;
-   width: 40%;
+   width: 33%;
    border-radius: 0;
-   padding: 11px;
+   padding: 5px;
+   
 }
 .ageapp label{
     margin-left: 258px;
     width: 40%;
     border-radius: 0;
     padding: 11px;
+    font-size: 14px;
+    margin-bottom: -5px;
 }
 .civilapp{
     display: flex; /* Use flexbox for alignment */
@@ -731,12 +714,14 @@ input{
     display: inline-block;
     width: 120px;
     margin-right: 55%;
+    margin-left: 40px;
 }
 
 .balanceFields input {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     margin-bottom: 5px;
+    margin-left: 40px;
 }
 
 
@@ -850,7 +835,8 @@ textarea {
 .application-type {
     margin-top: 60px;
     display: flex;
-    gap: 20px;
+    gap: -10px;
+    margin-right: 35px;
 }
 
 .checkbox-container {
@@ -1001,7 +987,7 @@ textarea {
 .location-input {
     border: 1px solid #10004E;
     border-radius: 0%;
-    width: 455px; /* Set a fixed width instead of percentage */
+    width: 400px; /* Set a fixed width instead of percentage */
     margin-top: 60px;
     padding: 8px;
     font-size: 14px;
@@ -1010,10 +996,8 @@ textarea {
 }
 
 .sher {
-
-
-
-    margin-left: -310px;
+    margin-left: -270px;
+    width: 90px;
 }
 
 
@@ -1074,8 +1058,8 @@ textarea {
 
 .map-modal {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 20%;
     right: auto;
     bottom: auto;
     transform: translate(-50%, -50%);
@@ -1083,7 +1067,7 @@ textarea {
     padding: 20px;
     border-radius: 8px;
     outline: none;
-    width: 80%;
+    width: 50%;
     max-width: 1000px;
 }
 

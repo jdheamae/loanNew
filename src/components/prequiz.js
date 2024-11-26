@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './prequiz.css'; // This file will contain the necessary CSS
 import Footer from './footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import BorrowerHeader from './borrowerheader';
 
 
@@ -10,6 +10,39 @@ const PreQuiz = () => {
         // Scroll to top when the component is mounted
         window.scrollTo(0, 0);
     }, []);
+
+
+    const [formData, setFormData] = useState({
+        monthlyIncome: '',
+        loanAmount: '',
+    });
+
+    const navigate = useNavigate();
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        const { loanAmount } = formData;
+
+        let loanType = '';
+        if (loanAmount <= 10000) {
+            loanType = 'personal';
+        } else if (loanAmount <= 50000) {
+            loanType = 'educational';
+        } else if (loanAmount <= 200000) {
+            loanType = 'pensioner';
+        } else {
+            alert('Requested loan amount exceeds maximum limit.');
+            return;
+        }
+
+        navigate('/quizresult', { state: { loanType, formData } });
+    };
 
     return (
         <div className="applicationquiz">
@@ -67,16 +100,28 @@ const PreQuiz = () => {
                             <input type="text" />
                         </div>
                         <div className="itemquiz">
-                            <label>Monthly Income:</label>
-                            <input type="number" />
+                        <label>Monthly Income</label>
+                        <input
+                                type="number"
+                                name="monthlyIncome"
+                                value={formData.monthlyIncome}
+                                onChange={handleInputChange}
+                                required
+                            />
                         </div>
                     </div>
 
                     <div className="quizsection">
                         <p>Financial Information</p>
                         <div className="itemquiz">
-                            <label>Loan Amount Requested:</label>
-                            <input type="number" />
+                        <label>Loan Amount Requested:</label>
+                            <input
+                                type="number"
+                                name="loanAmount"
+                                value={formData.loanAmount}
+                                onChange={handleInputChange}
+                                required
+                            />
                         </div>
                         <div className="itemquiz">
                             <label>Loan Purpose:</label>

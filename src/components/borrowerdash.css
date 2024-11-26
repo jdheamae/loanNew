@@ -229,7 +229,16 @@ hr {
 .status-failed {
   color: red;
 }
-.welcome, .nameO{
+.welcome{
+  color: #202840;
+  font-size: 40px;
+  margin-top: -80px;
+  align-items: left;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.nameO{
   color: #202840;
   font-size: 40px;
   margin-top: -20px;
@@ -303,9 +312,9 @@ hr {
 .active-loan {
   background-color: #e6f7ff;
   border-left: 10px solid #1890ff;
-  height: 155px;
+  height: 200px;
   width: 100%;
-  margin-top: -190px;
+  margin-top: -170px;
 }
 
 .loan-details p{
@@ -478,7 +487,7 @@ position: relative;
   max-height: 300px; /* Limit the height of the dropdown */
   overflow-y: auto; /* Enable vertical scrolling */
   background-color: #990000;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd00;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
   z-index: 10; /* Ensure the dropdown appears above other content */
@@ -537,12 +546,24 @@ margin-left: 5px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
-  width: 150px;
+  width: 120px;
 }
-
-.profile-link, .logout-button {
+.profile-link{
   display: block;
-  padding: 10px 20px;
+  padding: 2px ;
+  padding-left: 0px;
+  font-size: 14px;
+  color: #ffffff; /* Change text color to red */
+  text-decoration: none; /* Remove underline from the link */
+  text-align: left;
+  cursor: pointer;
+  background: none; /* For the button */
+  border: none; /* For the button */
+}
+.logout-button {
+  display: block;
+  padding: 2px;
+  padding-left: 20px;
   font-size: 14px;
   color: #ffffff; /* Change text color to red */
   text-decoration: none; /* Remove underline from the link */
@@ -552,13 +573,12 @@ margin-left: 5px;
   border: none; /* For the button */
 }
 
-.profile-link:hover, .logout-button:hover {
-  background-color: #ffffff;
-  color: #990000; /* Optional: Darker red on hover */
-  width: 110px;
+.profile-link:hover{
+  width: 120px;
+  color: #990000;
 }
 .logout-button:hover {
   background-color: #ffffff;
   color: #990000;
-  width: 150px;
+  width: 120px;
 }

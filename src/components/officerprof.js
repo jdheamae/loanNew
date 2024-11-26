@@ -96,12 +96,11 @@ const OfficerProf = () => {
                         <aside>
                             <div className="profile-section">
                                 <div className="profile-info">
-                                    <img src="User_circle1.png" alt="Profile" className="profile-photo" />
-                                    <h2 className="name2">Nicholas Patrick</h2>
-                                    <h4 className="work">Business Owner</h4>
+                                    <img src="User_circle1.png" alt="Profile" className="profile-photo1" />
+                                    <h2 className="name3">Nicholas Patrick</h2>                
                                 </div>
 
-                                <div className="about-info">
+                                <div className="about-info1">
                                     <h4>About</h4>
                                     <p><i className="fas fa-male" style={{ marginRight: '8px' }}></i><strong>Male</strong></p><hr />
                                     <p><i className="fas fa-birthday-cake" style={{ marginRight: '8px' }}></i>Born June 26, 1980</p><hr />
@@ -139,38 +138,10 @@ const OfficerProf = () => {
                             <canvas id="myPieChart"></canvas>
                         </div>
                     </div>
-                </div>
+                </div><br/><br/>
 
-            {/* ayaw hilabti
-            <section className="card-sectiono">
-                <div className="card-containero">
-                    <div className="approvalscard">
-                        <h3>Loan Approvals</h3>
-                        <p>Check the status of loan approvals for this month.</p>
-                    </div>
-                    <div className="activecard">
-                        <h3>Active Borrowers</h3>
-                        <p>Track and manage all active borrowers.</p>
-                    </div>
-                    <div className="overduecard">
-                        <h3>Overdue Payments</h3>
-                        <p>View overdue payments and take necessary actions.</p>
-                    </div>
-                </div>
-            </section>*/}
-            </main2>
-            <div>          
-                <section className="graph-sectiono">
-                <h3 className="graph3"> Graph</h3>
-                    <div className="graph-containero">
-                    
-                        <div className="grapho">
-                            <h3>Graphs</h3>
-                            <p>Check the status of loan approvals for this month.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            </main2><br/><br/>
+            
             
             
         </div>

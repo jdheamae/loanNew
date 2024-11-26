@@ -6,6 +6,8 @@ import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Modal from 'react-modal';
+import BorrowerHeader from './borrowerheader';
+import './borrowerdash.css'; 
 import L from 'leaflet';
 
 
@@ -213,10 +215,7 @@ const Appform = () => {
     return (
         <div className="application-form-pageapp">
             {/* Header Section */}
-            <header className="header">
-                    <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logolan"/>
-                <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
-            </header>
+                     <BorrowerHeader /> 
 
             {/* Form Container */}
             
@@ -585,7 +584,7 @@ const Appform = () => {
                             </div>
 
                             <div className="fillupan">
-                                <label>Account Balance:</label>
+                                <label>Account Balance</label>
                                 <div className="balanceFields">
                                 <label htmlFor="shareCapital">Share Capital:</label>
                                 <input 
@@ -623,7 +622,7 @@ const Appform = () => {
                                 <div className="fillupan">
                                     <label htmlFor="payment">Collateral/Security Offered</label>
                                     <div className="checkbox-groupapp">
-                                        <label class="pili">Real Estate
+                                        <label class="pili1">Real Estate
                                             <input
                                                 type="checkbox"
                                                 name="collateral" 
@@ -633,7 +632,7 @@ const Appform = () => {
                                             />
                                             <span class="checkmarkapp"></span>
                                         </label>
-                                            <label class="pili">Vehicle
+                                            <label class="pili1">Vehicle
                                             <input
                                                 type="checkbox"
                                                 name="collateral" 
@@ -643,7 +642,7 @@ const Appform = () => {
                                             />
                                             <span class="checkmarkapp"></span>
                                             </label>
-                                        <label class="pili">ATM Deposit
+                                        <label class="pili1">ATM Deposit
                                         <input
                                             type="checkbox"
                                             name="collateral" 
@@ -654,7 +653,7 @@ const Appform = () => {
                                         <span class="checkmarkapp"></span>
                                         
                                         </label>
-                                        <label class="pili">Savings/Time Deposit
+                                        <label class="pili1">Savings/Time Deposit
                                             <input
                                                 type="checkbox"
                                                 name="collateral" 
@@ -665,7 +664,7 @@ const Appform = () => {
                                             <span class="checkmarkapp"></span>
                                             
                                         </label>
-                                        <label class="pili">Others
+                                        <label class="pili1">Others
                                             <input
                                                 type="checkbox"
                                                 name="collateral" 
@@ -693,7 +692,7 @@ const Appform = () => {
                             <div class="fillupan">
                                 <label for="payment">Source of Payment</label>
                                 <div className="checkbox-groupapp">
-                                    <label class="pili">Salary
+                                    <label class="pili1">Salary
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -704,7 +703,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                 
                                     </label>
-                                    <label class="pili">Pension
+                                    <label class="pili1">Pension
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -715,7 +714,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                     
                                     </label>
-                                    <label class="pili">Allotment
+                                    <label class="pili1">Allotment
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -726,7 +725,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                     
                                     </label>
-                                    <label class="pili">Commission
+                                    <label class="pili1">Commission
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -737,7 +736,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                         
                                     </label>
-                                    <label class="pili">Income from Business
+                                    <label class="pili1">Income from Business
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -748,7 +747,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                         
                                     </label>
-                                    <label class="pili">Financial Assistance
+                                    <label class="pili1">Financial Assistance
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -759,7 +758,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                         
                                     </label>
-                                    <label class="pili">Others
+                                    <label class="pili1">Others
                                     <input
                                         type="checkbox"
                                         name="sourcePay" 
@@ -786,7 +785,7 @@ const Appform = () => {
                             <div class="fillupan">
                                 <label for="payment">Mode of Payment</label>
                                 <div className="checkbox-groupapp">
-                                    <label class="pili">Daily
+                                    <label class="pili1">Daily
                                     <input
                                         type="checkbox"
                                         name="modePay" 
@@ -797,7 +796,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                     
                                     </label>
-                                    <label class="pili">Weekly
+                                    <label class="pili1">Weekly
                                     <input
                                         type="checkbox"
                                         name="modePay" 
@@ -808,7 +807,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                         
                                     </label>
-                                    <label class="pili">Monthly
+                                    <label class="pili1">Monthly
                                     <input
                                         type="checkbox"
                                         name="modePay" 
@@ -819,7 +818,7 @@ const Appform = () => {
                                     <span class="checkmarkapp"></span>
                                         
                                     </label>
-                                    <label class="pili">Quarterly
+                                    <label class="pili1">Quarterly
                                     <input
                                         type="checkbox"
                                         name="modePay" 
@@ -838,7 +837,7 @@ const Appform = () => {
                                 <div class="fillupan">
                                     <label for="payment">Manner of Payment</label>
                                     <div className="checkbox-groupapp">
-                                        <label class="pili">Thru Coop/OTC
+                                        <label class="pili1">Thru Coop/OTC
                                             <input
                                                 type="checkbox"
                                                 name="mannerPay" 
@@ -849,7 +848,7 @@ const Appform = () => {
                                             <span class="checkmarkapp"></span>
                                             
                                         </label>
-                                        <label class="pili">Collector
+                                        <label class="pili1">Collector
                                             <input
                                                 type="checkbox"
                                                 name="mannerPay" 
@@ -860,7 +859,7 @@ const Appform = () => {
                                             <span class="checkmarkapp"></span>
                                             
                                         </label>
-                                        <label class="pili">Payroll Deduction
+                                        <label class="pili1">Payroll Deduction
                                             <input
                                                 type="checkbox"
                                                 name="mannerPay" 
@@ -871,7 +870,7 @@ const Appform = () => {
                                             <span class="checkmarkapp"></span>
                                             
                                         </label>
-                                        <label class="pili">PDC
+                                        <label class="pili1">PDC
                                             <input
                                                 type="checkbox"
                                                 name="mannerPay" 
@@ -882,7 +881,7 @@ const Appform = () => {
                                             <span class="checkmarkapp"></span>
                                             
                                         </label>
-                                        <label class="pili">Auto-Debit
+                                        <label class="pili1">Auto-Debit
                                             <input
                                                 type="checkbox"
                                                 name="mannerPay" 

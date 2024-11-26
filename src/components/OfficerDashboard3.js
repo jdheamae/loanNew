@@ -48,7 +48,7 @@ const Dashboard3 = () => {
     <div className="offdashboard">
       <header className="headeroff">
         <img src="logo.png" alt="MSU-IIT NMPC Logo" className="logooff" />
-        <h2 className="landingh2off2">MSU-IIT National Multi-Purpose Cooperative</h2>
+        <h2 className="landingh2off3">MSU-IIT National Multi-Purpose Cooperative</h2>
       </header>
 
       <div className="sidebar">
